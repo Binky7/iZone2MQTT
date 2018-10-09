@@ -24,13 +24,21 @@ If a setting is changed on the airconditioner it is reflected to the MQTT and a 
 
 # To Do
  Put in command line options for setting the MQTT broker address
+ 
  Put in a option to set the root topic.
+ 
  Make network code more robust
+ 
  Disconnect if we haven't heard from the iZone CB in a while
+ 
  Make sure reconnects to MQTT broker is it gets interrupted
+ 
  Send state infor to MQTT every so often in case Home Assistant gets restarted
+ 
  Make to auto demonice
+ 
  Create a startup script
+ 
  Make a make file
 
 # MQTT Signals
