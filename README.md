@@ -40,9 +40,31 @@ Sent iZone->MQTT
 | Topic | What |
 |-------|------|
 | iZone/connection | Sent to indicate if the iZone is working. online if yes, or offline if it isn't |
+| iZone/main/DuctTemperature | |
+| iZone/main/Temperature | |
+| iZone/main/TemperatureSetting | |
+| iZone/main/error | |
+| iZone/zone/n/TemperatureSetting | |
+| iZone/zone/n/Temperature | |
+| iZone/zone/n/AirMin | |
+| iZone/zone/n/AirMax | |
 
 
-iZone/connection 
+
+MQTT->iZone
+Note: These will also trigger the appropiate iZone->MQTT signal. Home Assistant tend to use these as confirmation that it has sent something.
+
+| Topic | What |
+|-------|------|
+| iZone/set/main/state | Turn the aircon 0-off or 1-on  |
+| iZone/set/main/mode | Set the mode, value are cool, heat, vent, dry or auto  |
+| iZone/set/main/fan | Sets the fan, values are low, med, high or auto |
+| iZone/set/main/TemperatureSetting | The temperature to aim  for  |
+| iZone/set/zone/n/mode | Mode for the zone, can be open or closed |
+| iZone/set/zone/n/TemperatureSetting | The tempeture to aim for for the zone |
+| iZone/set/zone/n/MinimumAirflow | I don't know it was in the iZone document so I implemented it |
+| iZone/set/zone/n/MaximumAirflow | I don't know it was in the iZone document so I implemented it |
+
 
 # Home Assistant configuration
 
