@@ -40,14 +40,19 @@ Sent iZone->MQTT
 | Topic | What |
 |-------|------|
 | iZone/connection | Sent to indicate if the iZone is working. online if yes, or offline if it isn't |
-| iZone/main/DuctTemperature | |
-| iZone/main/Temperature | |
-| iZone/main/TemperatureSetting | |
-| iZone/main/error | |
-| iZone/zone/n/TemperatureSetting | |
-| iZone/zone/n/Temperature | |
-| iZone/zone/n/AirMin | |
-| iZone/zone/n/AirMax | |
+| iZone/main/state | State of the aircon, vale are 0 (off) or 1 (on) |
+| iZone/main/mode | Operating mode. values are cool, heat, vent, dry or auto |
+| iZone/main/fan | Current fan setting. Values are low, med, high or auto |
+| iZone/main/DuctTemperature | The temperature in the ducting |
+| iZone/main/Temperature | The main temperature sensor for the aircon. It's probably the inlet or the controller on the wall. |
+| iZone/main/TemperatureSetting | What the aircon is aimimng for |
+| iZone/main/error | The error code from the aircon. Hopefully it's "OK" |
+| iZone/zone/n/name | The name of the zone |
+| iZone/zone/n/mode | The current state of the zone, values are close, open or auto |
+| iZone/zone/n/TemperatureSetting | The temperature the aircon is aiming for for the zone. Only meaningful if there is an iZone temp sensor in the zone |
+| iZone/zone/n/Temperature | The current temperature of the zone. Requires an iZone temp sensor |
+| iZone/zone/n/AirMin | The minimum airflow for the zone |
+| iZone/zone/n/AirMax | The maximum airflow for the zone |
 
 
 
