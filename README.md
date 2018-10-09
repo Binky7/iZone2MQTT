@@ -38,6 +38,7 @@ If a setting is changed on the airconditioner it is reflected to the MQTT and a 
 Sent iZone->MQTT
 
 | Topic | What |
+|-------|------|
 | iZone/connection | Sent to indicate if the iZone is working. online if yes, or offline if it isn't |
 
 
