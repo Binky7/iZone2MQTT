@@ -23,26 +23,25 @@ After this initial stuff, it enters a loop monitoring for a signal from the MQTT
 If a setting is changed on the airconditioner it is reflected to the MQTT and a request to change from teh MQTT is sent to the airconditioned.
 
 # To Do
- Put in command line options for setting the MQTT broker address
- 
+ Put in command line options for setting the MQTT broker address.
  Put in a option to set the root topic.
- 
- Make network code more robust
- 
- Disconnect if we haven't heard from the iZone CB in a while
- 
- Make sure reconnects to MQTT broker is it gets interrupted
- 
- Send state infor to MQTT every so often in case Home Assistant gets restarted
- 
- Make to auto demonice
- 
- Create a startup script
- 
- Make a make file
+ Make network code more robust.
+ Disconnect if we haven't heard from the iZone CB in a while.
+ Make sure reconnects to MQTT broker is it gets interrupted.
+ Send state infor to MQTT every so often in case Home Assistant gets restarted.
+ Make to auto demonice.
+ Create a startup script.
+ Make a make file.
 
 # MQTT Signals
 
+Sent iZone->MQTT
+
+| Topic | What |
+| iZone/connection | Sent to indicate if the iZone is working. online if yes, or offline if it isn't |
+
+
+iZone/connection 
 
 # Home Assistant configuration
 
